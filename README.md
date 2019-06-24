@@ -1,6 +1,10 @@
 # hexo-theme-imaimo
+
 🎨 一个移植的主题，样式有些传统，但很简洁和实用。
+
 🚀 仅为个人兴趣驱使，理论上只有我或者觉得它好看的人使用。
+
+![](https://raw.githubusercontent.com/vensing/BlogImageRepo/master/img/hexo-imaimo.png?token=AFIIPOROE2COT65PMMIMEGC5CCM3Y)
 
 ## 📝 来源
 
@@ -58,7 +62,8 @@ menu:
   Links: /friends
 ```
 
-2.需在博客根目录下的`source`文件夹下新建一个名为`about`的文件夹，再新建一个`index.md`即可 (最终路径：`/blogpath/source/about/index.md`)。index.md 和普通文章 md 文件一样编写即可；新增菜单项的 url 和 source 文件夹下新建目录名应一致。
+2.需在博客根目录下的`source`文件夹下新建一个名为`about`的文件夹，再新建一个`index.md`即可 (最终路径：`/blogpath/source/about/index.md`)。
+index.md 和普通文章 md 文件一样编写即可；新增菜单项的 url 和 source 文件夹下新建目录名应一致。
 
 ## 📌 后期计划
 
