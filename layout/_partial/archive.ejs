@@ -1,0 +1,40 @@
+<% if (pagination == 2){ %>
+  <% page.posts.each(function(post){ %>
+    <%- partial('article', {post: post, index: true}) %>
+  <% }) %>
+<% } else { %>
+  <% var last; %>
+  <h1 class="special_title title_categories"><%= pagination %></h1>
+  <% page.posts.each(function(post, i){ %>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
+        </div></section>
+      <% } %>
+      <% last = year; %>
+      <section class="category_exhibit_item">
+        <div class="archive-year-wrap">
+          <% if(pagination == 'Archives'){ %>
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="category_note"><%= year %></a>
+          <% } %>
+          <% if(pagination == 'Categories'){ %>
+            <a href="<%- url_for(config.category_dir + '/' + page.category) %>" class="category_note"><%= page.category %></a>
+            <% } %>
+        </div>
+        <div class="archives">
+    <% } %>
+    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+  <% }) %>
+  <% if (page.posts.length){ %>
+    </div></section>
+  <% } %>
+<% } %>
+<% if (page.total > 1){ %>
+  <nav id="page-nav">
+    <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
+    <%- paginator({
+      prev_text: prev_text,
+      next_text: next_text
+    }) %>
+  </nav>
+<% } %>

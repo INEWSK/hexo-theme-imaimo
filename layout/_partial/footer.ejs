@@ -1,0 +1,16 @@
+
+<footer class="site_footer">
+    <div class="footer_wrapper">
+          <div class="footer_note">
+              <p class="theme_declare">The current theme is imaimo.</p>
+              <p class="copyright">© 2019 <a href="/" title=""><%= config.author %></a>. Built with <a href="http://hexo.io/" title="Hexo">Hexo</a>.</p>
+          </div>
+      </div>
+  </footer>
+
+  <% if (theme.fancybox){ %>
+    <%- css('fancybox/jquery.fancybox') %>
+    <%- js('fancybox/jquery.fancybox.pack') %>
+  <% } %>
+  <%- js('js/highlight') %>
+  <%- js('js/script') %>

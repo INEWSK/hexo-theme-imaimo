@@ -1,0 +1,17 @@
+<!-- <article class="archive-article archive-type-<%= post.layout %>">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <%- partial('post/date', {class_name: 'archive-article-date', date_format: 'MMM D'}) %>
+      <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+    </header>
+  </div>
+</article> -->
+
+<ul class="post_list_in_category">
+            
+    <li class="post_item_in_category">
+        <span class="post_date_in_category"><%= date(post.date) %></span>
+        <a class="post_link_in_category" href="<%- url_for(post.path) %>" title="<%- url_for(post.link) %>"><%= post.title %></a>
+    </li>
+    
+</ul>

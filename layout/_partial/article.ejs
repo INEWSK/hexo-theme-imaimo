@@ -1,0 +1,38 @@
+
+<article class="single_post">
+  <ul class="post_list">
+          
+      <li class="post_item">
+          <h2 class="single_post_title"><i class="icon_sprite icon_post_prefix"></i><a class="post_title_link" href="<%- url_for(post.path) %>" title=""><%= post.title %></a></h2>
+          <div class="single_post_info">
+              <span class="post_date">日期：<%= date(post.date) %></span><span class="post_categories">分类：
+                <%- list_categories(post.categories, {
+                  show_count: false,
+                  class: 'article-category',
+                  style: 'none',
+                  separator: ' / '
+                }) %>
+                
+              </span>
+          </div>
+          <div class="post_content">
+              
+              <% if (post.excerpt && index){ %>
+                <%- post.excerpt %>
+              <% } else { %>
+                <%- post.content %>
+              <% } %>
+              
+          </div>
+          <% if (post.excerpt && index){ %>
+            <% if (theme.excerpt_link){ %>
+          <div class="read_post"><a class="read_post_link" href="<%- url_for(post.path) %>#more" title=""><%= theme.excerpt_link %></a></div>
+            <% } %>
+          <% } %>
+      </li>
+      
+  </ul>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>

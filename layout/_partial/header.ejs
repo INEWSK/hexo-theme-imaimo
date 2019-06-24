@@ -1,0 +1,19 @@
+
+<header class="site_header">
+  <div class="site_logo">
+      <a class="logo_link" href="/" title=""><img class="acgtofe_logo" src="/images/logo.png" alt="<%- config.subtitle %>"></a>
+  </div>
+  <nav class="site_nav">
+      <ul class="nav_list">
+          <% for(var i in theme.menu){ %>
+            <% if((theme.menu[i]+'/index.html')==url_for(page.path)){ %>
+            <li class="nav_item nav_current">
+            <% } else{%>
+            <li class="nav_item">
+            <% } %>        
+              <a class="nav_link" href="<%- url_for(theme.menu[i]) %>" title="<%= i %>"><%= i %><cite class="nav_line"></cite></a></li>
+          <% } %>
+      </ul>
+  </nav>
+  <div class="site_top_img"><img class="top_img" src="/images/wallpaper_top/wallpaper_top_snowball.jpg" alt=""></div>
+</header>

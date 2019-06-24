@@ -1,0 +1,27 @@
+<%- partial('_partial/head') %>
+<body>
+  <div  class="total_container">
+    <div  class="wrapper">
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+      <div class="content clearfix">
+        <div class="main">
+          <div class="main_inner">
+              <section class="posts"><%- body %></section>
+              
+          </div>
+          <div class="ribbon_brown"></div>
+        </div>
+        <% if (theme.sidebar){ %>
+          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+        <% } %>
+      </div>
+      
+    </div>
+
+    <div class="footer_placeholder"></div>
+  </div>
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/before-head', null, {cache: !config.relative_link}) %>
+  <div id="returnTop" class="return_top_tab" style="position: fixed; right: 0px; top: 471px; display: block;"><a class="return_top_link" href="javascript:;" title=""></a></div>
+</body>
+</html>
