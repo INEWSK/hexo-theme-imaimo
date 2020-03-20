@@ -9,7 +9,7 @@
 
 ## 📝 来源
 
-本主题基于 [http://acgtofe.com/](http://acgtofe.com/) ACGTOFE 站点主题移植，主题的所有权归原作者所有，目前正在努力与原作者联系主题授权中。
+本主题基于 [http://acgtofe.com/](http://acgtofe.com/) ACGTOFE 站点主题移植，主题的所有权归原作者所有。
 
 ## 🎯 功能
 
